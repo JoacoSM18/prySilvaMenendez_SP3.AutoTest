@@ -21,5 +21,21 @@ namespace prySilvaMenendez_SP3.AutoTest
         {
 
         }
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void txtDominio_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDominio.Text.Length < 6)
+            {
+                MessageBox.Show("Debe Ingresar al Menos 6 Caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
+        private void mtbNumeroTurno_Click(object sender, EventArgs e)
+        {
+            mtbNumeroTurno.SelectionStart = 0;
+        }
     }
 }
