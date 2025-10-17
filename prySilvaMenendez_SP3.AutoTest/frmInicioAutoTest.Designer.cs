@@ -75,7 +75,7 @@
             this.mtbNumeroTurno.Mask = "99999";
             this.mtbNumeroTurno.Name = "mtbNumeroTurno";
             this.mtbNumeroTurno.Size = new System.Drawing.Size(100, 26);
-            this.mtbNumeroTurno.TabIndex = 12;
+            this.mtbNumeroTurno.TabIndex = 0;
             this.mtbNumeroTurno.ValidatingType = typeof(int);
             this.mtbNumeroTurno.Click += new System.EventHandler(this.mtbNumeroTurno_Click);
             // 
@@ -85,7 +85,8 @@
             this.txtDominio.MaxLength = 7;
             this.txtDominio.Name = "txtDominio";
             this.txtDominio.Size = new System.Drawing.Size(100, 26);
-            this.txtDominio.TabIndex = 11;
+            this.txtDominio.TabIndex = 1;
+            this.txtDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDominio_KeyPress);
             this.txtDominio.Validating += new System.ComponentModel.CancelEventHandler(this.txtDominio_Validating);
             // 
             // numAño
@@ -103,12 +104,14 @@
             0});
             this.numAño.Name = "numAño";
             this.numAño.Size = new System.Drawing.Size(77, 26);
-            this.numAño.TabIndex = 9;
+            this.numAño.TabIndex = 2;
             this.numAño.Value = new decimal(new int[] {
             1950,
             0,
             0,
             0});
+            this.numAño.Click += new System.EventHandler(this.numAño_Click);
+            this.numAño.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numAño_KeyPress);
             // 
             // txtTitular
             // 
@@ -116,7 +119,8 @@
             this.txtTitular.MaxLength = 30;
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(267, 26);
-            this.txtTitular.TabIndex = 4;
+            this.txtTitular.TabIndex = 3;
+            this.txtTitular.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitular_Validating);
             // 
             // lblTitular
             // 
@@ -174,21 +178,21 @@
             this.mskCantidadDominio.Location = new System.Drawing.Point(320, 168);
             this.mskCantidadDominio.Name = "mskCantidadDominio";
             this.mskCantidadDominio.Size = new System.Drawing.Size(77, 26);
-            this.mskCantidadDominio.TabIndex = 5;
+            this.mskCantidadDominio.TabIndex = 6;
             // 
             // mskAñoAntiguedad
             // 
             this.mskAñoAntiguedad.Location = new System.Drawing.Point(320, 104);
             this.mskAñoAntiguedad.Name = "mskAñoAntiguedad";
             this.mskAñoAntiguedad.Size = new System.Drawing.Size(77, 26);
-            this.mskAñoAntiguedad.TabIndex = 4;
+            this.mskAñoAntiguedad.TabIndex = 5;
             // 
             // mskCantidadTurnos
             // 
             this.mskCantidadTurnos.Location = new System.Drawing.Point(320, 41);
             this.mskCantidadTurnos.Name = "mskCantidadTurnos";
             this.mskCantidadTurnos.Size = new System.Drawing.Size(77, 26);
-            this.mskCantidadTurnos.TabIndex = 3;
+            this.mskCantidadTurnos.TabIndex = 4;
             // 
             // lblCantidadDominio
             // 
@@ -223,7 +227,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(525, 22);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(131, 42);
-            this.btnRegistrar.TabIndex = 2;
+            this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -234,7 +238,7 @@
             this.btnSalir.Location = new System.Drawing.Point(525, 99);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(131, 41);
-            this.btnSalir.TabIndex = 3;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
@@ -244,7 +248,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(525, 336);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(131, 45);
-            this.btnConsultar.TabIndex = 4;
+            this.btnConsultar.TabIndex = 9;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 

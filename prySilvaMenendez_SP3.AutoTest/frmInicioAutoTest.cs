@@ -16,10 +16,16 @@ namespace prySilvaMenendez_SP3.AutoTest
         {
             InitializeComponent();
         }
-
         private void frmInicioAutoTest_Load(object sender, EventArgs e)
         {
-
+            txtDominio.CharacterCasing = CharacterCasing.Upper;
+        }
+        private void txtDominio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -36,6 +42,22 @@ namespace prySilvaMenendez_SP3.AutoTest
         private void mtbNumeroTurno_Click(object sender, EventArgs e)
         {
             mtbNumeroTurno.SelectionStart = 0;
+        }
+        private void txtTitular_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtTitular.Text.Trim().Length < 2)
+            {
+                MessageBox.Show("El Titular Debe Tener al Menos Dos Caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
+        private void numAño_Click(object sender, EventArgs e)
+        {
+            numAño.Select(0, 0);
+        }
+        private void numAño_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
