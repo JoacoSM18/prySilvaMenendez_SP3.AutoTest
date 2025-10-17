@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace prySilvaMenendez_SP3.AutoTest
+{
+    public partial class frmInicioAutoTest : Form
+    {
+        public frmInicioAutoTest()
+        {
+            InitializeComponent();
+        }
+
+        private void frmInicioAutoTest_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
