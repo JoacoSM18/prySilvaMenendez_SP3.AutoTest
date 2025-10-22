@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioAutoTest));
             this.mrcTurnos = new System.Windows.Forms.GroupBox();
             this.mtbNumeroTurno = new System.Windows.Forms.MaskedTextBox();
             this.txtDominio = new System.Windows.Forms.TextBox();
@@ -286,6 +287,7 @@
             this.Controls.Add(this.mrcEstadisticas);
             this.Controls.Add(this.mrcTurnos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmInicioAutoTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
