@@ -64,9 +64,9 @@
             this.mrcTurnos.Controls.Add(this.lblDominio);
             this.mrcTurnos.Controls.Add(this.lblNumeroTurno);
             this.mrcTurnos.Location = new System.Drawing.Point(8, 14);
-            this.mrcTurnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mrcTurnos.Margin = new System.Windows.Forms.Padding(2);
             this.mrcTurnos.Name = "mrcTurnos";
-            this.mrcTurnos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mrcTurnos.Padding = new System.Windows.Forms.Padding(2);
             this.mrcTurnos.Size = new System.Drawing.Size(327, 178);
             this.mrcTurnos.TabIndex = 0;
             this.mrcTurnos.TabStop = false;
@@ -75,7 +75,7 @@
             // mtbNumeroTurno
             // 
             this.mtbNumeroTurno.Location = new System.Drawing.Point(123, 30);
-            this.mtbNumeroTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbNumeroTurno.Margin = new System.Windows.Forms.Padding(2);
             this.mtbNumeroTurno.Mask = "99999";
             this.mtbNumeroTurno.Name = "mtbNumeroTurno";
             this.mtbNumeroTurno.Size = new System.Drawing.Size(68, 20);
@@ -86,7 +86,7 @@
             // txtDominio
             // 
             this.txtDominio.Location = new System.Drawing.Point(123, 72);
-            this.txtDominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDominio.Margin = new System.Windows.Forms.Padding(2);
             this.txtDominio.MaxLength = 7;
             this.txtDominio.Name = "txtDominio";
             this.txtDominio.Size = new System.Drawing.Size(68, 20);
@@ -97,7 +97,7 @@
             // numAño
             // 
             this.numAño.Location = new System.Drawing.Point(123, 106);
-            this.numAño.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numAño.Margin = new System.Windows.Forms.Padding(2);
             this.numAño.Maximum = new decimal(new int[] {
             2025,
             0,
@@ -112,7 +112,7 @@
             this.numAño.Size = new System.Drawing.Size(51, 20);
             this.numAño.TabIndex = 2;
             this.numAño.Value = new decimal(new int[] {
-            1950,
+            2025,
             0,
             0,
             0});
@@ -122,7 +122,7 @@
             // txtTitular
             // 
             this.txtTitular.Location = new System.Drawing.Point(123, 144);
-            this.txtTitular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitular.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitular.MaxLength = 30;
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(179, 20);
@@ -178,9 +178,9 @@
             this.mrcEstadisticas.Controls.Add(this.lblAñoAntiguedad);
             this.mrcEstadisticas.Controls.Add(this.lblCantidadTurnos);
             this.mrcEstadisticas.Location = new System.Drawing.Point(8, 218);
-            this.mrcEstadisticas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mrcEstadisticas.Margin = new System.Windows.Forms.Padding(2);
             this.mrcEstadisticas.Name = "mrcEstadisticas";
-            this.mrcEstadisticas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mrcEstadisticas.Padding = new System.Windows.Forms.Padding(2);
             this.mrcEstadisticas.Size = new System.Drawing.Size(327, 142);
             this.mrcEstadisticas.TabIndex = 1;
             this.mrcEstadisticas.TabStop = false;
@@ -189,7 +189,7 @@
             // mtbCantidadDominio
             // 
             this.mtbCantidadDominio.Location = new System.Drawing.Point(213, 109);
-            this.mtbCantidadDominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbCantidadDominio.Margin = new System.Windows.Forms.Padding(2);
             this.mtbCantidadDominio.Mask = "99999";
             this.mtbCantidadDominio.Name = "mtbCantidadDominio";
             this.mtbCantidadDominio.Size = new System.Drawing.Size(53, 20);
@@ -200,7 +200,7 @@
             // mtbAñoAntiguedad
             // 
             this.mtbAñoAntiguedad.Location = new System.Drawing.Point(213, 68);
-            this.mtbAñoAntiguedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbAñoAntiguedad.Margin = new System.Windows.Forms.Padding(2);
             this.mtbAñoAntiguedad.Mask = "99999";
             this.mtbAñoAntiguedad.Name = "mtbAñoAntiguedad";
             this.mtbAñoAntiguedad.Size = new System.Drawing.Size(53, 20);
@@ -211,7 +211,7 @@
             // mtbCantidadTurnos
             // 
             this.mtbCantidadTurnos.Location = new System.Drawing.Point(213, 27);
-            this.mtbCantidadTurnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbCantidadTurnos.Margin = new System.Windows.Forms.Padding(2);
             this.mtbCantidadTurnos.Mask = "99999";
             this.mtbCantidadTurnos.Name = "mtbCantidadTurnos";
             this.mtbCantidadTurnos.Size = new System.Drawing.Size(53, 20);
@@ -254,7 +254,7 @@
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(350, 14);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(87, 27);
             this.btnRegistrar.TabIndex = 7;
@@ -266,7 +266,7 @@
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(350, 64);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(87, 27);
             this.btnSalir.TabIndex = 8;
@@ -278,7 +278,7 @@
             // 
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(350, 218);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(87, 29);
             this.btnConsultar.TabIndex = 9;
@@ -298,7 +298,7 @@
             this.Controls.Add(this.mrcTurnos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicioAutoTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto-Test";
