@@ -74,5 +74,25 @@ namespace prySilvaMenendez_SP3.AutoTest
         {
             this.Close();
         }
+
+        private void mtbCantidadTurnos_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mtbCantidadTurnos_Click(object sender, EventArgs e)
+        {
+            mtbCantidadTurnos.SelectionStart = 0;
+        }
+
+        private void mtbAñoAntiguedad_Click(object sender, EventArgs e)
+        {
+            mtbAñoAntiguedad.SelectionStart = 0;
+        }
+
+        private void mtbCantidadDominio_Click(object sender, EventArgs e)
+        {
+            mtbCantidadDominio.SelectionStart = 0;
+        }
     }
 }

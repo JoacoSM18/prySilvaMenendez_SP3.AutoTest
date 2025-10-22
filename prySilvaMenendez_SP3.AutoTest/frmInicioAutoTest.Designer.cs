@@ -39,9 +39,9 @@
             this.lblDominio = new System.Windows.Forms.Label();
             this.lblNumeroTurno = new System.Windows.Forms.Label();
             this.mrcEstadisticas = new System.Windows.Forms.GroupBox();
-            this.mskCantidadDominio = new System.Windows.Forms.MaskedTextBox();
-            this.mskAñoAntiguedad = new System.Windows.Forms.MaskedTextBox();
-            this.mskCantidadTurnos = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCantidadDominio = new System.Windows.Forms.MaskedTextBox();
+            this.mtbAñoAntiguedad = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCantidadTurnos = new System.Windows.Forms.MaskedTextBox();
             this.lblCantidadDominio = new System.Windows.Forms.Label();
             this.lblAñoAntiguedad = new System.Windows.Forms.Label();
             this.lblCantidadTurnos = new System.Windows.Forms.Label();
@@ -171,9 +171,9 @@
             // 
             // mrcEstadisticas
             // 
-            this.mrcEstadisticas.Controls.Add(this.mskCantidadDominio);
-            this.mrcEstadisticas.Controls.Add(this.mskAñoAntiguedad);
-            this.mrcEstadisticas.Controls.Add(this.mskCantidadTurnos);
+            this.mrcEstadisticas.Controls.Add(this.mtbCantidadDominio);
+            this.mrcEstadisticas.Controls.Add(this.mtbAñoAntiguedad);
+            this.mrcEstadisticas.Controls.Add(this.mtbCantidadTurnos);
             this.mrcEstadisticas.Controls.Add(this.lblCantidadDominio);
             this.mrcEstadisticas.Controls.Add(this.lblAñoAntiguedad);
             this.mrcEstadisticas.Controls.Add(this.lblCantidadTurnos);
@@ -186,29 +186,39 @@
             this.mrcEstadisticas.TabStop = false;
             this.mrcEstadisticas.Text = "Estadisticas";
             // 
-            // mskCantidadDominio
+            // mtbCantidadDominio
             // 
-            this.mskCantidadDominio.Location = new System.Drawing.Point(213, 109);
-            this.mskCantidadDominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mskCantidadDominio.Name = "mskCantidadDominio";
-            this.mskCantidadDominio.Size = new System.Drawing.Size(53, 20);
-            this.mskCantidadDominio.TabIndex = 6;
+            this.mtbCantidadDominio.Location = new System.Drawing.Point(213, 109);
+            this.mtbCantidadDominio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbCantidadDominio.Mask = "99999";
+            this.mtbCantidadDominio.Name = "mtbCantidadDominio";
+            this.mtbCantidadDominio.Size = new System.Drawing.Size(53, 20);
+            this.mtbCantidadDominio.TabIndex = 6;
+            this.mtbCantidadDominio.ValidatingType = typeof(int);
+            this.mtbCantidadDominio.Click += new System.EventHandler(this.mtbCantidadDominio_Click);
             // 
-            // mskAñoAntiguedad
+            // mtbAñoAntiguedad
             // 
-            this.mskAñoAntiguedad.Location = new System.Drawing.Point(213, 68);
-            this.mskAñoAntiguedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mskAñoAntiguedad.Name = "mskAñoAntiguedad";
-            this.mskAñoAntiguedad.Size = new System.Drawing.Size(53, 20);
-            this.mskAñoAntiguedad.TabIndex = 5;
+            this.mtbAñoAntiguedad.Location = new System.Drawing.Point(213, 68);
+            this.mtbAñoAntiguedad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbAñoAntiguedad.Mask = "99999";
+            this.mtbAñoAntiguedad.Name = "mtbAñoAntiguedad";
+            this.mtbAñoAntiguedad.Size = new System.Drawing.Size(53, 20);
+            this.mtbAñoAntiguedad.TabIndex = 5;
+            this.mtbAñoAntiguedad.ValidatingType = typeof(int);
+            this.mtbAñoAntiguedad.Click += new System.EventHandler(this.mtbAñoAntiguedad_Click);
             // 
-            // mskCantidadTurnos
+            // mtbCantidadTurnos
             // 
-            this.mskCantidadTurnos.Location = new System.Drawing.Point(213, 27);
-            this.mskCantidadTurnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mskCantidadTurnos.Name = "mskCantidadTurnos";
-            this.mskCantidadTurnos.Size = new System.Drawing.Size(53, 20);
-            this.mskCantidadTurnos.TabIndex = 4;
+            this.mtbCantidadTurnos.Location = new System.Drawing.Point(213, 27);
+            this.mtbCantidadTurnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbCantidadTurnos.Mask = "99999";
+            this.mtbCantidadTurnos.Name = "mtbCantidadTurnos";
+            this.mtbCantidadTurnos.Size = new System.Drawing.Size(53, 20);
+            this.mtbCantidadTurnos.TabIndex = 4;
+            this.mtbCantidadTurnos.ValidatingType = typeof(int);
+            this.mtbCantidadTurnos.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCantidadTurnos_MaskInputRejected);
+            this.mtbCantidadTurnos.Click += new System.EventHandler(this.mtbCantidadTurnos_Click);
             // 
             // lblCantidadDominio
             // 
@@ -317,9 +327,9 @@
         private System.Windows.Forms.Label lblAñoAntiguedad;
         private System.Windows.Forms.Label lblCantidadTurnos;
         private System.Windows.Forms.TextBox txtTitular;
-        private System.Windows.Forms.MaskedTextBox mskCantidadDominio;
-        private System.Windows.Forms.MaskedTextBox mskAñoAntiguedad;
-        private System.Windows.Forms.MaskedTextBox mskCantidadTurnos;
+        private System.Windows.Forms.MaskedTextBox mtbCantidadDominio;
+        private System.Windows.Forms.MaskedTextBox mtbAñoAntiguedad;
+        private System.Windows.Forms.MaskedTextBox mtbCantidadTurnos;
         private System.Windows.Forms.NumericUpDown numAño;
         private System.Windows.Forms.TextBox txtDominio;
         private System.Windows.Forms.MaskedTextBox mtbNumeroTurno;
