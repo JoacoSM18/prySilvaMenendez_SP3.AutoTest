@@ -29,7 +29,17 @@ namespace prySilvaMenendez_SP3.AutoTest
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            
+            if (txtDominio.Text.Trim().Length >= 6 &&
+                txtTitular.Text.Trim().Length >= 2 &&
+                mtbNumeroTurno.Text.Trim() != "" &&
+                numAño.Value > 0)
+            {
+                MessageBox.Show("Registro Exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Faltan Datos o Hay Campos Inválidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void txtDominio_Validating(object sender, CancelEventArgs e)
         {
@@ -58,6 +68,11 @@ namespace prySilvaMenendez_SP3.AutoTest
         private void numAño_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
