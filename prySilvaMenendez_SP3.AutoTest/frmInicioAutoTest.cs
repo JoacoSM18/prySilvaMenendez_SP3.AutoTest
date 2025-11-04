@@ -20,7 +20,11 @@ namespace prySilvaMenendez_SP3.AutoTest
             public string titular;
         }
 
+        int turnos = 0;
         int indice = 0;
+        int añomasantiguo = 0;
+        int dominiomas6caracteres = 0;
+        int menor = 2026;
         Turno[] vecTurnos = new Turno[100];
 
         public frmInicioAutoTest()
@@ -76,6 +80,10 @@ namespace prySilvaMenendez_SP3.AutoTest
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (mtbNumeroTurno.Text == "" || txtDominio.Text == "" || numAño.Value == 0 ||txtTitular.Text == "")
+            {
+                MessageBox.Show("Datos Incompletos, Por Favor Complete Todos los Campos","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if (txtDominio.Text.Trim().Length >= 6 &&
                 txtTitular.Text.Trim().Length >= 2 &&
                 mtbNumeroTurno.Text.Trim() != "" &&
@@ -87,7 +95,6 @@ namespace prySilvaMenendez_SP3.AutoTest
                     mtbNumeroTurno.Focus();
                     return;
                 }
-
                 for (int i = 0; i < indice; i++)
                 {
                     if (vecTurnos[i].numeroturno == numeroTurno)
@@ -97,10 +104,19 @@ namespace prySilvaMenendez_SP3.AutoTest
                         return;
                     }
                 }
+                if ((int)numAño.Value < menor)
+                {
+                    menor = (int)numAño.Value;
+                }
+                if(txtDominio.Text.Trim().Length == 6)
+                {
+                    dominiomas6caracteres++;
+                }
                 vecTurnos[indice].numeroturno = numeroTurno;
                 vecTurnos[indice].dominio = txtDominio.Text.Trim().ToUpper();
                 vecTurnos[indice].añofabricacion = (int)numAño.Value;
                 vecTurnos[indice].titular = txtTitular.Text.Trim();
+                turnos++;
                 indice++;
                 MessageBox.Show("Registro Exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDominio.Clear();
@@ -113,6 +129,23 @@ namespace prySilvaMenendez_SP3.AutoTest
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (indice <= 0)
+            {
+                MessageBox.Show("No Existen Turnos Cargados Para Consultar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblRCantidadTurnos.Visible = true;
+                lblRCantidadTurnos.Text = turnos.ToString();
+                lblRAñoMasAntiguo.Visible = true;
+                lblRAñoMasAntiguo.Text = menor.ToString();
+                lblRDominio6Caracteres.Visible = true; 
+                lblRDominio6Caracteres.Text = dominiomas6caracteres.ToString();
+            }
         }
     }
 }

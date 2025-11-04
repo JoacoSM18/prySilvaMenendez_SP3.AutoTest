@@ -39,6 +39,9 @@
             this.lblDominio = new System.Windows.Forms.Label();
             this.lblNumeroTurno = new System.Windows.Forms.Label();
             this.mrcEstadisticas = new System.Windows.Forms.GroupBox();
+            this.lblRDominio6Caracteres = new System.Windows.Forms.Label();
+            this.lblRAñoMasAntiguo = new System.Windows.Forms.Label();
+            this.lblRCantidadTurnos = new System.Windows.Forms.Label();
             this.lblCantidadDominio = new System.Windows.Forms.Label();
             this.lblAñoAntiguedad = new System.Windows.Forms.Label();
             this.lblCantidadTurnos = new System.Windows.Forms.Label();
@@ -60,6 +63,7 @@
             this.mrcTurnos.Controls.Add(this.lblAño);
             this.mrcTurnos.Controls.Add(this.lblDominio);
             this.mrcTurnos.Controls.Add(this.lblNumeroTurno);
+            this.mrcTurnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcTurnos.Location = new System.Drawing.Point(12, 22);
             this.mrcTurnos.Name = "mrcTurnos";
             this.mrcTurnos.Size = new System.Drawing.Size(490, 274);
@@ -69,27 +73,27 @@
             // 
             // mtbNumeroTurno
             // 
-            this.mtbNumeroTurno.Location = new System.Drawing.Point(184, 46);
+            this.mtbNumeroTurno.Location = new System.Drawing.Point(206, 43);
             this.mtbNumeroTurno.Mask = "99999";
             this.mtbNumeroTurno.Name = "mtbNumeroTurno";
-            this.mtbNumeroTurno.Size = new System.Drawing.Size(100, 26);
+            this.mtbNumeroTurno.Size = new System.Drawing.Size(100, 28);
             this.mtbNumeroTurno.TabIndex = 0;
             this.mtbNumeroTurno.ValidatingType = typeof(int);
             this.mtbNumeroTurno.Click += new System.EventHandler(this.mtbNumeroTurno_Click);
             // 
             // txtDominio
             // 
-            this.txtDominio.Location = new System.Drawing.Point(184, 111);
+            this.txtDominio.Location = new System.Drawing.Point(206, 111);
             this.txtDominio.MaxLength = 7;
             this.txtDominio.Name = "txtDominio";
-            this.txtDominio.Size = new System.Drawing.Size(100, 26);
+            this.txtDominio.Size = new System.Drawing.Size(100, 28);
             this.txtDominio.TabIndex = 1;
             this.txtDominio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDominio_KeyPress);
             this.txtDominio.Validating += new System.ComponentModel.CancelEventHandler(this.txtDominio_Validating);
             // 
             // numAño
             // 
-            this.numAño.Location = new System.Drawing.Point(184, 163);
+            this.numAño.Location = new System.Drawing.Point(206, 163);
             this.numAño.Maximum = new decimal(new int[] {
             2025,
             0,
@@ -101,7 +105,7 @@
             0,
             0});
             this.numAño.Name = "numAño";
-            this.numAño.Size = new System.Drawing.Size(76, 26);
+            this.numAño.Size = new System.Drawing.Size(76, 28);
             this.numAño.TabIndex = 2;
             this.numAño.Value = new decimal(new int[] {
             2025,
@@ -113,54 +117,62 @@
             // 
             // txtTitular
             // 
-            this.txtTitular.Location = new System.Drawing.Point(184, 222);
+            this.txtTitular.Location = new System.Drawing.Point(206, 222);
             this.txtTitular.MaxLength = 30;
             this.txtTitular.Name = "txtTitular";
-            this.txtTitular.Size = new System.Drawing.Size(266, 26);
+            this.txtTitular.Size = new System.Drawing.Size(266, 28);
             this.txtTitular.TabIndex = 3;
             this.txtTitular.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitular_Validating);
             // 
             // lblTitular
             // 
             this.lblTitular.AutoSize = true;
+            this.lblTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitular.Location = new System.Drawing.Point(22, 228);
             this.lblTitular.Name = "lblTitular";
-            this.lblTitular.Size = new System.Drawing.Size(52, 20);
+            this.lblTitular.Size = new System.Drawing.Size(61, 22);
             this.lblTitular.TabIndex = 3;
             this.lblTitular.Text = "Titular";
             // 
             // lblAño
             // 
             this.lblAño.AutoSize = true;
+            this.lblAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAño.Location = new System.Drawing.Point(22, 169);
             this.lblAño.Name = "lblAño";
-            this.lblAño.Size = new System.Drawing.Size(146, 20);
+            this.lblAño.Size = new System.Drawing.Size(165, 22);
             this.lblAño.TabIndex = 2;
             this.lblAño.Text = "Año de Fabricación";
             // 
             // lblDominio
             // 
             this.lblDominio.AutoSize = true;
-            this.lblDominio.Location = new System.Drawing.Point(22, 111);
+            this.lblDominio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDominio.Location = new System.Drawing.Point(22, 117);
             this.lblDominio.Name = "lblDominio";
-            this.lblDominio.Size = new System.Drawing.Size(67, 20);
+            this.lblDominio.Size = new System.Drawing.Size(75, 22);
             this.lblDominio.TabIndex = 1;
             this.lblDominio.Text = "Dominio";
             // 
             // lblNumeroTurno
             // 
             this.lblNumeroTurno.AutoSize = true;
+            this.lblNumeroTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroTurno.Location = new System.Drawing.Point(22, 46);
             this.lblNumeroTurno.Name = "lblNumeroTurno";
-            this.lblNumeroTurno.Size = new System.Drawing.Size(136, 20);
+            this.lblNumeroTurno.Size = new System.Drawing.Size(156, 22);
             this.lblNumeroTurno.TabIndex = 0;
             this.lblNumeroTurno.Text = "Número de Turno ";
             // 
             // mrcEstadisticas
             // 
+            this.mrcEstadisticas.Controls.Add(this.lblRDominio6Caracteres);
+            this.mrcEstadisticas.Controls.Add(this.lblRAñoMasAntiguo);
+            this.mrcEstadisticas.Controls.Add(this.lblRCantidadTurnos);
             this.mrcEstadisticas.Controls.Add(this.lblCantidadDominio);
             this.mrcEstadisticas.Controls.Add(this.lblAñoAntiguedad);
             this.mrcEstadisticas.Controls.Add(this.lblCantidadTurnos);
+            this.mrcEstadisticas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcEstadisticas.Location = new System.Drawing.Point(12, 335);
             this.mrcEstadisticas.Name = "mrcEstadisticas";
             this.mrcEstadisticas.Size = new System.Drawing.Size(490, 218);
@@ -168,12 +180,42 @@
             this.mrcEstadisticas.TabStop = false;
             this.mrcEstadisticas.Text = "Estadisticas";
             // 
+            // lblRDominio6Caracteres
+            // 
+            this.lblRDominio6Caracteres.Location = new System.Drawing.Point(350, 173);
+            this.lblRDominio6Caracteres.Name = "lblRDominio6Caracteres";
+            this.lblRDominio6Caracteres.Size = new System.Drawing.Size(100, 23);
+            this.lblRDominio6Caracteres.TabIndex = 5;
+            this.lblRDominio6Caracteres.Text = " ";
+            this.lblRDominio6Caracteres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRDominio6Caracteres.Visible = false;
+            // 
+            // lblRAñoMasAntiguo
+            // 
+            this.lblRAñoMasAntiguo.Location = new System.Drawing.Point(350, 111);
+            this.lblRAñoMasAntiguo.Name = "lblRAñoMasAntiguo";
+            this.lblRAñoMasAntiguo.Size = new System.Drawing.Size(100, 20);
+            this.lblRAñoMasAntiguo.TabIndex = 4;
+            this.lblRAñoMasAntiguo.Text = " ";
+            this.lblRAñoMasAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRAñoMasAntiguo.Visible = false;
+            // 
+            // lblRCantidadTurnos
+            // 
+            this.lblRCantidadTurnos.Location = new System.Drawing.Point(350, 47);
+            this.lblRCantidadTurnos.Name = "lblRCantidadTurnos";
+            this.lblRCantidadTurnos.Size = new System.Drawing.Size(100, 23);
+            this.lblRCantidadTurnos.TabIndex = 3;
+            this.lblRCantidadTurnos.Text = " ";
+            this.lblRCantidadTurnos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRCantidadTurnos.Visible = false;
+            // 
             // lblCantidadDominio
             // 
             this.lblCantidadDominio.AutoSize = true;
             this.lblCantidadDominio.Location = new System.Drawing.Point(22, 174);
             this.lblCantidadDominio.Name = "lblCantidadDominio";
-            this.lblCantidadDominio.Size = new System.Drawing.Size(282, 20);
+            this.lblCantidadDominio.Size = new System.Drawing.Size(319, 22);
             this.lblCantidadDominio.TabIndex = 2;
             this.lblCantidadDominio.Text = "Cantidad con Dominio de 6 Caracteres";
             // 
@@ -182,7 +224,7 @@
             this.lblAñoAntiguedad.AutoSize = true;
             this.lblAñoAntiguedad.Location = new System.Drawing.Point(22, 111);
             this.lblAñoAntiguedad.Name = "lblAñoAntiguedad";
-            this.lblAñoAntiguedad.Size = new System.Drawing.Size(156, 20);
+            this.lblAñoAntiguedad.Size = new System.Drawing.Size(175, 22);
             this.lblAñoAntiguedad.TabIndex = 1;
             this.lblAñoAntiguedad.Text = "Año del Más Antiguo";
             // 
@@ -191,7 +233,7 @@
             this.lblCantidadTurnos.AutoSize = true;
             this.lblCantidadTurnos.Location = new System.Drawing.Point(22, 48);
             this.lblCantidadTurnos.Name = "lblCantidadTurnos";
-            this.lblCantidadTurnos.Size = new System.Drawing.Size(148, 20);
+            this.lblCantidadTurnos.Size = new System.Drawing.Size(169, 22);
             this.lblCantidadTurnos.TabIndex = 0;
             this.lblCantidadTurnos.Text = "Cantidad de Turnos";
             // 
@@ -226,6 +268,7 @@
             this.btnConsultar.TabIndex = 9;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // frmInicioAutoTest
             // 
@@ -271,6 +314,9 @@
         private System.Windows.Forms.NumericUpDown numAño;
         private System.Windows.Forms.TextBox txtDominio;
         private System.Windows.Forms.MaskedTextBox mtbNumeroTurno;
+        private System.Windows.Forms.Label lblRDominio6Caracteres;
+        private System.Windows.Forms.Label lblRAñoMasAntiguo;
+        private System.Windows.Forms.Label lblRCantidadTurnos;
     }
 }
 
